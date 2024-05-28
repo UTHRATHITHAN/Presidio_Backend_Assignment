@@ -92,7 +92,7 @@ app.post('/login', async (req, res) => {
     const ALMOST_ONE_HOUR_MS = 3600000
 
 
-    res.cookie('Token', newToken, { httpOnly: true, expires: new Date(Date.now() + ALMOST_ONE_HOUR_MS) })
+    res.cookie('Token', newToken, { httpOnly: true,domain:"https://presidio-assignment-one.vercel.app", expires: new Date(Date.now() + ALMOST_ONE_HOUR_MS) })
 
     res.json({
         status: "success",
