@@ -212,7 +212,7 @@ app.get("/allproperties", async (req, res) => {
 })
 
 app.get("/logout", (req, res) => {
-    res.clearCookie("Token", { sameSite:"none", secure:true });
+    res.clearCookie("Token", { sameSite:"none",domain:"https://presidio-assignment-one.vercel.app",path:"/", secure:true });
     // res.clearCookie("Token", { domain: "localhost", path: "/" });
 
     res.end()
