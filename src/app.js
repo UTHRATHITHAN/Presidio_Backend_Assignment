@@ -92,7 +92,7 @@ app.post('/login', async (req, res) => {
     const ALMOST_ONE_HOUR_MS = 3600000
 
 
-    res.cookie('Token', newToken, { httpOnly: true,SameSite="none", Secure, expires: new Date(Date.now() + ALMOST_ONE_HOUR_MS) })
+    res.cookie('Token', newToken, { httpOnly: true,sameSite:'none', secure:true, expires: new Date(Date.now() + ALMOST_ONE_HOUR_MS) })
 
     res.json({
         status: "success",
